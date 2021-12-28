@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>applet</title>
+</head>
+<body>
+    <h1>Тег &lt;applet&gt;</h1>
+    <h3>Описание</h3>
+    Тег &lt;applet&gt; предназначен для вставки на страницу апплетов — небольших программ, написанных на языке Java. Этот тег является устаревшим, взамен необходимо использовать более гибкий тег &lt;object&gt;. Между открывающим и закрывающим тегом можно добавить текст, который будет отображаться в браузере, если он не поддерживает апплеты. В противном случае текст не выводится. <br>
+    <h3>Синтаксис</h3>
+    <p>&lt;applet code="URL">Текст&lt;/applet&gt;</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400"> 
+        <col width="1000" align="center">
+        <tr>
+            <td>align</td>
+            <td>&lt;applet align="bottom | left | middle | right | top">&lt;/applet&gt;</td>
+            <td>Поддерживается в браузерах: Internet Explorer, Chrome,	Opera,	Safari,	Firefox</td>
+            <td>Задает выравнивание апплета относительно близлежащих элементов и текста.</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>&lt;applet code="URL" alt="текст">&lt;/applet&gt;</td>
+            <td>Ни один из браузеров не поддерживает альтернативный текст</td>
+            <td>Атрибут alt устанавливает альтернативный текст для апплетов. Такой текст позволяет получить информацию о программе во время ее загрузки.</td>
+        </tr>
+        <tr>
+            <td>archive</td>
+            <td>&lt;applet code="URL" archive="URL файла с архивом">&lt;/applet&gt;</td>
+            <td>Данный атрибут не поддерживается ни одним из браузеров</td>
+            <td>Позволяет указать архивный файл в формате ZIP или JAR (Java-архив), в котором располагается апплет.</td>
+        </tr>
+        <tr>
+            <td>code</td>
+            <td>&lt;applet code="URL">&lt;/applet&gt;</td>
+            <td>Имя файла с расширением .class. Если расширение не указано (например: code="clock"), то браузер добавит расширение автоматически.</td>
+            <td>Указывает имя файла с Java-классом (оно имеет расширение .class). Это имя может комбинироваться со значением атрибута codebase, который задает путь к папке, где располагается файл.</td>
+        </tr>
+        <tr>
+            <td>codebase</td>
+            <td>&lt;applet code="URL" codebase="URL">&lt;/applet&gt;</td>
+            <td><p>Текущее время: 
+                <applet code="Clock.class" codebase="/example/" width="60" height="10"></applet></p></td>
+            <td>Используется для установки базового адреса, относительно которого будет задаваться значение атрибута code. Если значение codebase не указано, то в качестве адреса принимается адрес текущего документа.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>&lt;applet code="URL" height="значение">&lt;/applet&gt;</td>
+            <td><p>
+                <applet code="Clock.class" codebase="/example/" height="10"></applet></p></td>
+                <td>Задаёт высоту апплета. Допускается использовать значения в пикселах или процентах. Если установлена процентная запись, то размеры апплета вычисляются относительно размера родительского элемента — контейнера, где находится тег &lt;applet&gt;.</td>
+        </tr>
+        <tr>
+            <td>hspace</td>
+            <td>&lt;applet code="URL" hspace="отступ по горизонтали">&lt;/applet&gt;</td>
+            <td><applet code="Clock.class" hspace="10"></applet></td>
+           <td>Задает горизонтальный отступ вокруг апплета.</td>
+        </tr>
+        <tr>
+            <td>vspace</td>
+            <td>&lt;applet code="URL" vspace="отступ по вертикали">&lt;/applet&gt;</td>
+            <td><applet code="Clock.class" vspace="10"></applet></td>
+            <td>Задает вертикальный отступ вокруг апплета</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>&lt;applet code="URL" width="отступ по ширине">&lt;/applet&gt;</td>
+            <td><applet code="Clock.class" width="25"></applet></td>
+            <td>Любое целое положительное число в пикселах или процентах.</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+   <p><h2><a href="index.html">Оглавление</a></h2></p> 
+</body>
+</html>
