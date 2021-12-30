@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio</title>
+</head>
+<body>
+    <p><h1>Тег &lt;audio&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Добавляет, воспроизводит и управляет настройками аудиозаписи на веб-странице. Путь к файлу задается через атрибут src или вложенный тег &lt;source&gt;. Внутри контейнера &lt;audio&gt; можно написать текст, который будет выводиться в браузерах, не работающих с этим тегом.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>autoplay</td>
+            <td>&lt;audio autoplay="autoplay"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio autoplay>
+                <source src="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3" type="audio/mpeg">Скачайте музыку</a>
+                </audio></td>
+                <td>При наличии этого атрибута аудио начинает воспроизводиться автоматически после загрузки страницы. Атрибут autoplay отменяет действие preload.</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>&lt;audio controls="controls"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio controls>
+                <source src="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">
+                <a href="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">Скачайте музыку</a>
+            </audio></td>
+            <td>Добавляет панель управления к аудиотреку. Вид панели и ее содержимое зависит от браузера и может в себя включать: кнопку воспроизведения, паузы, перемотки, ползунок для изменения уровня громкости и др.</td>
+        </tr>
+        <tr>
+            <td>loop</td>
+            <td>&lt;audio loop="loop"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio autoplay loop>
+                <source src="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">
+                <a href="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">Скачайте музыку</a>
+            </audio></td>
+            <td>Зацикливает воспроизведение аудио, чтобы оно повторялось с начала после завершения.</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td>&lt;audio preload="none | metadata | auto"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio autoplay preload="metadata">
+                <source src="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">
+                <a href="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">Скачайте музыку</a>
+                </audio></td>
+                <td>Используется для загрузки аудиофайла вместе с загрузкой веб-страницы. Этот атрибут игнорируется, если установлен autoplay. <br>
+                <b>Значения</b> <br>
+                none <br> Не загружать аудиофайл. <br>
+                metadata <br> Загрузить только служебную информацию (продолжительность звучания и др.). <br>
+                auto <br> Загрузить аудиофайл целиком при загрузке страницы. <br> </td>
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>&lt;audio src="URL"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio src="../Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3" controls="controls">Ваш браузер не поддерживает воспроизведение этой музыки.</audio></td>
+            <td>Указывает путь к воспроизводимому аудиофайлу. Для этой же цели также можно использовать тег &lt;source&gt;.</td>
+        </tr>
+        <tr>
+            <td>muted</td>
+            <td>&lt;audio muted="muted"&gt;
+            &lt;/audio&gt;</td>
+            <td><audio autoplay muted controls>
+                <source src="..//Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">
+                <a href="..//Audio/Kiss-_I_Was_Made_For_Lovin_You.mp3">Скачайте музыку</a>
+            </audio></td>
+            <td>В качестве значения указывается muted, также допустимо вообще не указывать никакое значение.</td>
+        </tr>
+    </table>
+    <p><h2><a href="index.html">Оглавление</a></h2></p> 
+</body>
+</html>
