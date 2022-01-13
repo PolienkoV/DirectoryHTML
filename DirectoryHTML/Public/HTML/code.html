@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <p><h1>Тег &lt;cite&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;code&gt; предназначен для отображения одной или нескольких строк текста, который представляет собой программный код. Сюда относятся имена переменных, ключевые слова, тексты функции и т.д. Браузеры обычно отображают содержимое контейнера <code> как моноширинный текст уменьшенного размера.
+        В отличие от тега &lt;pre&gt; дополнительные пробелы внутри контейнера &lt;code&gt; не учитываются, так же, как и переносы текста. Поэтому используйте тег &lt;br&gt; или &lt;p&gt; для создания переносов.</p>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>...</td>
+                <td>&lt;code&gt;Текст&lt;/code&gt;</td>
+                <td> <p>Код программы</p>
+                    <p><code>
+                      function checkParent (src, dest) {<Br>
+                       while (src != null) {<Br>
+                         if (src.tagName == dest) return src<Br>
+                          src = src.parentElement<Br>
+                       }<Br>
+                       return null<Br>
+                      }</code></p></td>
+                <td>...</td>
+            </tr>
+        </table>
+        <p>Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">универсальные атрибуты</a> </p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
