@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>command</title>
+</head>
+<body>
+    <p><h1>Тег &lt;command&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Создает команду в виде переключателя, флажка или обычной кнопки. Тег &lt;command&gt; должен располагаться внутри &lt;menu&gt;, в противном случае он не будет показан.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>...</td>
+            <td>&lt;menu&gt;
+                &lt;command параметры&gt;
+               &lt;/menu&gt;</td>
+            <td><menu>
+                <command onclick="alert('Слава роботам!')" label="Выполнить директиву №1">
+                <command onclick="alert('Сдавайтесь, людишки!')" label="Выполнить директиву №2">
+                <command onclick="alert('Убить всех человеков!')" label="Выполнить директиву №3">
+               </menu></td>
+            <td>checked <br>
+                Активирует команду. Доступно только если type установлен как radio или checkbox. <br>
+                disabled <br>
+                Задает, доступна команда или нет. <br>
+                icon <br>
+                Адрес картинки, которая показывается как команда. <br>
+                label <br>
+                Название команды. <br>
+                radiogroup <br>
+                Задает имя группы переключателей. Доступно только если type установлен как radio. <br>
+                type <br>
+                Определяет тип команды (checkbox, command, radio). По умолчанию command.</td>
+        </tr>
+    </table>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+    
+</body>
+</html>
