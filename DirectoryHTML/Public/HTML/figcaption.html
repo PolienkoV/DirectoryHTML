@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figcaption</title>
+</head>
+<body>
+    <p><h1> Тег &lt;figcaption&gt;</h1></p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>...</td>
+            <td>&lt;figure&gt;
+                &lt;figcaption&gt;Описание&lt;/figcaption&gt;
+               &lt;/figure&gt;</td>
+              <td> <script>
+                document.createElement('figure');
+                document.createElement('figcaption');
+               </script>
+               <style>
+                figure {
+                 background: #d9dabb; /* Цвет фона */
+                 display: block; /* Блочный элемент */
+                 width: 150px; /* Ширина */
+                 height: 190px; /* Высота */
+                 float: left; /* Блоки выстраиваются по горизонтали */
+                 margin: 0 10px 10px 0; /* Отступы */
+                 text-align: center; /* Выравнивание по центру */
+                }
+                figure img {
+                 border: 2px solid #8b8e4b; /* Параметры рамки */
+                }
+                figure p {
+                 margin-bottom: 0; /* Отступ снизу */
+                }
+               </style>
+              </head>
+              <body>
+               <article>
+                <figure>
+                 <p><img src="images/thumb3.jpg" alt=""></p>
+                 <figcaption>Купеческий клуб</figcaption>
+                </figure>
+                <figure>
+                 <p><img src="images/thumb4.jpg" alt=""></p>
+                 <figcaption>Памятник Св. Владимиру</figcaption>
+                </figure>
+              </article></td>
+              <td>Содержит описание для тега &lt;figure&gt;. Тег &lt;figcaption&gt; должен быть первым или последним элементом в группе.</td>
+        </tr>
+    </table>
+</body>
+</html>
