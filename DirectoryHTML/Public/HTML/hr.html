@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hr</title>
+</head>
+<body>
+    <p><h1>Тег &lt;hr&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Рисует горизонтальную линию, которая по своему виду зависит от используемых параметров, а также браузера. Тег &lt;hr&gt; относится к блочным элементам, линия всегда начинается с новой строки, а после нее все элементы отображаются на следующей строке.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>align</td>
+            <td>&lt;hr align="center | left | right"&gt;</td>
+            <td><hr align="right" width="300">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy 
+                nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</p></td>
+            <td>Выравнивание линии по краю родительского элемента. В качестве родителя обычно выступает окно браузера.
+                <dl>
+                    <dt>center</dt> <dd>Выравнивание по центру.</dd>
+                    <dt>left</dt> <dd>Выравнивание линии по левому краю.</dd>
+                    <dt>right</dt> <dd>Выравнивание по правому краю.</dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>&lt;hr color="цвет"&gt;</td>
+            <td><hr color="red" width="300">
+                <hr color="green" width="300">
+                <hr color="blue" width="300"></td>
+            <td><p>Задает цвет линии, созданной с помощью тега &lt;hr&gt;. Одновременно, использование этого атрибута запрещает трехмерные эффекты, словно был добавлен атрибут noshade.</p>
+            <p>Для задания цвета линии применяется два способа: первый использует обозначения цветов в шестнадцатеричном коде, а второй — по названию некоторых цветов. Преимущественно используется способ, основанный на шестнадцатеричной системе исчисления, как наиболее универсальный.</p></td>
+        </tr>
+        <tr>
+            <td>noshade</td>
+            <td>&lt;hr noshade&gt;</td>
+            <td><hr width="300">
+                <hr noshade width="300"></td>
+            <td>Использование атрибута noshade отменяет трехмерные эффекты, которые используются при рисовании линии по умолчанию.</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>&lt;hr size="число"&gt;</td>
+            <td><hr noshade size="10">
+                <hr noshade size="8">
+                <hr noshade size="6">
+                <hr noshade size="4">
+                <hr noshade size="2">
+                <hr noshade size="1"></td>
+            <td>Устанавливает толщину линии в пикселах.</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>&Lt;hr width="число"&gt;</td>
+            <td><hr noshade size="4" width="75%">
+                <hr noshade size="2" width="60%">
+                <hr noshade size="1" width="50%">
+                <hr noshade size="1" width="38%">
+                <hr noshade size="1" width="25%">
+                <hr noshade size="1" width="10%"></td>
+            <td>Устанавливает ширину линии в процентах или пикселах. При использовании процентов за 100% берется ширина родительского элемента. Как правило, в качестве родителя выступает окно браузера</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
