@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <p><h1>Тег &lt;input&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;input&gt; является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем. Главным образом &lt;input&gt; предназначен для создания текстовых полей, различных кнопок, переключателей и флажков. Хотя элемент &lt;input&gt; не требуется помещать внутрь контейнера &lt;form&gt;, определяющего форму, но если введенные пользователем данные должны быть отправлены на сервер, где их обрабатывает серверная программа, то указывать &lt;form&gt; обязательно. То же самое обстоит и в случае обработки данных с помощью клиентских приложений, например, скриптов на языке JavaScript.</p>
+    <p>Основной атрибут тега &lt;input&gt;, определяющий вид элемента — type. Он позволяет задавать следующие элементы формы: текстовое поле (text), поле с паролем (password), переключатель (radio), флажок (checkbox), скрытое поле (hidden), кнопка (button), кнопка для отправки формы (submit), кнопка для очистки формы (reset), поле для отправки файла (file) и кнопка с изображением (image). Для каждого элемента существует свой список атрибутов, которые определяют его вид и характеристики. Кроме того, в HTML5 добавлено еще более десятка новых элементов.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>accept</td>
+            <td>&lt;input type="file" accept="MIME-тип"&gt;</td>
+            <td><form action="handler.php">
+                <p><strong>Укажите картинку в формате JPEG, PNG или GIF</strong></p>
+                <p><input type="file" name="img" accept="../Image/Xl2oV-GlkE9T7yH0wLv_iNoXa0GAcxb1pM1DfoTYg5H-2ZMwZRsop6ojMubKq0dJi4Nw7TiH3in43VSRwsnOEpR3.jpg">
+                <input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов. Тип файла указывается как MIME-тип, при нескольких значениях они перечисляются через запятую. Если файл не подходит под установленный фильтр, он не показывается в окне выбора файлов.</td>
+        </tr>
+        <tr>
+            <td>accesskey</td>
+            <td>&lt;input accesskey="c"&gt;</td>
+            <td>...</td>
+            <td><p>
+                Атрибут accesskey позволяет перейти к элементу с помощью некоторого сочетания клавиш с заданной в атрибуте буквой или цифрой. Браузеры при этом используют различные комбинации клавиш. Например, для accesskey="s" работают следующие сочетания.</p>
+            <ul>
+                <li>Internet Explorer: Alt + S</li>
+                <li>Chrome: Alt + S</li>
+                <li>Opera: Shift + Esc, S</li>
+                <li>Safari: Alt + S</li>
+                <li>Firefox: Shift + Alt + S</li>
+            </ul></td>
+        </tr>
+        <tr>
+            <td>align</td>
+            <td>&lt;input type="image" align="bottom | left | middle | right | top"&gt;</td>
+            <td><form method="post" action="handler.php">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                <p><input src="images/imgbutton.gif" type="image" align="right"></p>
+               </form></td>
+            <td>Определяет, как выравнивать поле с изображением относительно текста или других элементов формы.</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>&lt;input type="image" alt="Текст"&gt;</td>
+            <td><form method="post" action="handler.php">
+                <p>...</p>
+                <p><input src="images/imgbutton.gif" type="image" 
+                alt="Отправить форму на сервер"></p>
+               </form></td>
+            <td>Атрибут alt устанавливает альтернативный текст для поля с изображением. Такой текст позволяет получить текстовую информацию о рисунке при отключенной в браузере загрузке изображений. Поскольку загрузка изображений происходит после получения браузером информации о нем, то замещающий рисунок текст появляется раньше. А уже по мере загрузки текст будет сменяться изображением. Браузеры также отображают альтернативный текст в виде подсказки, появляющейся при наведении курсора мыши на изображение.</td>
+        </tr>
+        <tr>
+            <td>autocomplete</td>
+            <td>&lt;input type="text" autocomplete="on | off"&gt;</td>
+            <td><form>
+                <p>Имя: <input name="user" autocomplete="on"></p>
+                <p>Пароль: <input name="pass" type="password"></p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Этот атрибут помогает заполнять поля форм текстом, который был введён в них ранее. Значения сохраняет и подставляет браузер, при этом автозаполнение по соображениям безопасности может отключаться пользователем в настройках и не может в таком случае управляться атрибутом autocomplete.</td>
+        </tr>
+        <tr>
+            <td>autofocus</td>
+            <td>&lt;input autofocus&gt;</td>
+            <td><form action="handler.php">
+                <p>Поиск по сайту</p>
+                <p><input type="search" name="s" autofocus>
+                <input type="submit" value="Искать"></p>
+               </form></td>
+            <td> Автоматически устанавливает фокус в поле формы. В таком поле можно сразу набирать текст без явного щелчка по нему курсором мыши.</td>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>&lt;input type="image" border="толщина рамки"&gt;</td>
+            <td><form method="post" action="handler.php">
+                <p>...</p>
+                <p><input src="images/imgbutton.gif" type="image" border="2"></p>
+               </form></td>
+               <td>Браузеры обрабатывают изображения, добавленные через тег &lt;input&gt;, подобно рисункам, созданным с помощью тега &lt;img&gt;. В том числе вокруг изображения можно добавить рамку, цвет которой совпадает с цветом текста.</td>
+        </tr>
+        <tr>
+            <td>checked</td>
+            <td>&lt;input type="radio" checked&gt;
+                &lt;input type="checkbox" checked&gt;</td>
+            <td> <form method="post" action="input5.php">
+                <p><b>С какими операционными системами вы знакомы?</b></p>
+                <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+                <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
+                <input type="checkbox" name="option3" value="a3">System X<Br> 
+                <input type="checkbox" name="option4" value="a4">Linux<Br> 
+                <input type="checkbox" name="option5" value="a5">X3-DOS</p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Этот атрибут определяет, помечен ли заранее такой элемент формы, как флажок или переключатель. В случае использования переключателей (radiobutton), может быть отмечен только один элемент группы, для флажков (checkbox) допустимо пометить хоть все элементы.</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td>&lt;input type="..." disabled&gt;</td>
+            <td><form  action="handler.php">
+                <p><input type="text" size="30" onFocus="this.form.submit.disabled=0"></p>
+                <p><input type="submit" name="submit" value="Отправить" disabled></p>
+               </form> </td>
+            <td>Блокирует доступ и изменение поля формы. Оно в таком случае отображается серым и недоступным для активации пользователем. Кроме того, такое поле не может получить фокус путем нажатия на клавишу Tab, мышью или другим способом. Тем не менее, такое состояние поля можно менять с помощью скриптов. Заблокированное в поле значение не передается на сервер.</td>
+        </tr>
+        <tr>
+            <td>form</td>
+            <td>&lt;input type="<тип>" form="<идентификатор>"&gt;
+                &lt;form id="<идентификатор>"&gt;...&lt;/form&gt;</td>
+            <td><form id="data"></form>
+                <p><input placeholder="Ваше имя" name="user" form="data"></p>
+                <p><input type="submit" value="Отправить форму" form="data"></p></td>
+            <td>Связывает поле с формой по её идентификатору. Такая связь необходима в случае, когда поле располагается за пределами &lt;form&gt;, например, при создании её программно или по соображениям дизайна.</td>
+        </tr>
+        <tr>
+            <td>formaction</td>
+            <td>&lt;input type="submit" formaction="URL"&gt;</td>
+            <td><form> 
+                <p><input placeholder="Ваше имя" name="user"></p>
+                <p><input type="submit" formaction="handler.php" value="Отправить"></p>
+               </form> </td>
+            <td>Определяет адрес обработчика формы — это программа, которая получает данные формы и производит с ними желаемые действия. Атрибут formaction по своему действию аналогично атрибуту action тега &lt;form&gt;.</td>
+        </tr>
+        <tr>
+            <td>formenctype</td>
+            <td>&lt;input type="submit" formenctype="application/x-www-form-urlencoded | multipart/form-data | text/plain"&gt;</td>
+            <td><form>
+                <p>Ваше имя: <input name="user"></p>
+                <p>Файл для заявки: <input name="file" type="file"></p>
+                <p><input type="submit" formaction="handler.php" formmethod="post" 
+                   formenctype="multipart/form-data" value="Отправить">
+               </form></td>
+            <td>Устанавливает способ кодирования данных формы при их отправке на сервер. Обычно явно указывается в случае, когда используется поле для отправки файла (input type="file"). Этот атрибут по своему действию аналогичен атрибуту enctype тега &lt;form&gt;, при совместном использовании formenctype и enctype последний игнорируется.</td>
+        </tr>
+        <tr>
+            <td>formmethod</td>
+            <td>&lt;input type="submit" formmethod="get | post"&gt;</td>
+            <td> <form>
+                <p>Ваше имя: <input name="user"></p>
+                <p>Файл для заявки: <input name="file" type="file"></p>
+                <p><input type="submit" formaction="handler.php" formmethod="post" 
+                formenctype="multipart/form-data" value="Отправить">
+               </form></td>
+            <td><p>Атрибут сообщает браузеру, каким методом следует передавать данные формы на сервер.</p>
+                <p>Различают два метода — GET и POST, которые задаются ключевыми словами get и post.</p>
+            <dl>
+                <dt>get</dt>
+                <dd>Этот метод предназначен для передачи данных формы непосредственно в адресной строке в виде пар «имя=значение», которые добавляются к адресу страницы после вопросительного знака и разделяются между собой амперсандом (символ &). Полный адрес к примеру будет http://site.ru/doc/?name=Vasya&password=pup. Объём данных в методе ограничен 4 Кб.</dd>
+                <dt>post</dt>
+                <dd>Посылает на сервер данные в запросе браузера, объём пересылаемых данных ограничен лишь настройками сервера.</dd>
+            </dl></td>
+        </tr>
+        <tr>
+            <td>formnovalidate</td>
+            <td>&lt;input type="submit" formnovalidate&gt;</td>
+            <td><form action="handler.php">
+                <p><input required placeholder="Имя"></p>
+                <p><input type="email" required placeholder="Ваш email"></p>
+                <p><input type="url" required placeholder="Сайт"></p>
+                <p><input type="submit" formnovalidate value="Отправить без проверки"></p>
+               </form></td>
+            <td>Отменяет встроенную проверку данных введенных пользователем в форме на корректность перед отправкой формы. Такая проверка делается браузером автоматически для полей &lt;input type="email"&gt;, &lt;input type="url"&gt;, а также при наличии атрибута pattern или required у тега &lt;input&gt;.</td>
+        </tr>
+        <tr>
+            <td>formtarget</td>
+            <td>&lt;input type="submit" formtarget="<имя окна> | _blank | _self | _parent | _top"&gt;</td>
+            <td><form>
+                <p><iframe name="output" height="50" width="400"></iframe></p>
+                <p>Ваше имя: <input name="user"></p>
+                <p><input type="submit" formaction="handler.php" formtarget="output" 
+                   value="Отправить"></p>
+               </form></td>
+            <td>Определяет окно или фрейм в которое будет загружаться результат, возвращаемый обработчиком формы, в виде HTML-документа.
+                <dl>
+                    <dt>_blank</dt>
+                    <dd>Загружает страницу в новое окно браузера.</dd>
+                    <dt>_self</dt>
+                    <dd>Загружает страницу в текущее окно.</dd>
+                    <dt>_parent</dt>
+                    <dd>Загружает страницу во фрейм-родитель, если фреймов нет, то это значение работает как _self.</dd>
+                    <dt>_top</dt>
+                    <dd>Отменяет все фреймы и загружает страницу в полном окне браузера, если фреймов нет, то это значение работает как _self.</dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>list</td>
+            <td>&lt;input list="<идентификатор>"&gt;
+                &lt;datalist id="<идентификатор>"&gt;
+                &lt;option value="Текст1"&gt;
+                &lt;option value="Текст2"&gt;
+                &lt;/datalist&&gt;</td>
+            <td><form> 
+                <p><input list="cocktail"></p>
+                <datalist id="cocktail">
+                <option>Аперитивы</option>
+                <option>Горячие</option>
+                <option>Десертные</option>
+                <option>Диджестивы</option>
+                <option>Молочные</option>
+                <option>Слоистые</option>
+                </datalist> 
+                </form></td>
+            <td>Указывает на список вариантов, созданный с помощью тега &lt;datalist&gt;, которые можно выбирать при наборе текста. Изначально этот список скрыт и становится доступным при получении полем фокуса.</td>
+        </tr>
+        <tr>
+            <td>max</td>
+            <td>&lt;input type="number" max="максимальное число"&gt;
+                &lt;input type="range" max="максимальное число"&gt;
+                &lt;input type="date" max="верхняя дата"&gt;</td>
+            <td><form action="handler.php">
+                <p>Укажите вашу температуру в градусах Цельсия</p>
+                <input type="number" min="35" max="41" 
+                 value="36.6" step="0.1" /></p>
+               </form></td>
+            <td>Устанавливает верхнее значение для ввода числа или даты в поле формы.</td>
+        </tr>
+        <tr>
+            <td>maxlength</td>
+            <td>&lt;input type="text" maxlength="число"&gt;
+                &lt;input type="password" maxlength="число"&gt;</td>
+            <td><form  action="handler.php">
+                <p><input type="text" size="30" maxlength="10"></p>
+                <p><input type="submit" name="submit" value="Отправить"></p>
+               </form></td>
+            <td>Устанавливает максимальное число символов, которое может быть введено пользователем в текстовом поле. Когда это количество достигается при наборе, дальнейший ввод становится невозможным.</td>
+        </tr>
+        <tr>
+            <td>min</td>
+            <td>&lt;input type="number" min="минимальное число"&gt;</td>
+            <td><form action="handler.php">
+                <p>Укажите температуру в градусах Цельсия</p>
+                <p><input type="number" min="-50" value="0" /></p>
+               </form></td>
+            <td>Устанавливает нижнее значение для ввода числа или даты в поле формы.</td>
+        </tr>
+        <tr>
+            <td>multiple</td>
+            <td>&lt;input type="file" multiple&gt;
+                &lt;input type="email" multiple&gt;</td>
+            <td> <form action="handler.php">
+                <p><input type="file" name="photo" required multiple
+                   title="Загрузите одну или несколько фотографий"></p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Атрибут multiple позволяет указывать одновременно несколько файлов в поле для загрузки файлов, а также несколько адресов электронной почты. При использовании двух и более почтовых адресов они должны перечисляться через запятую.</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>&lt;input type="..." name="имя"&gt;</td>
+            <td> <script>  
+                function dataField(f) {
+                  alert("Вы ввели: " + f.comment.value);
+                }
+              </script>
+             </head>
+             <body>  
+            
+              <form action="handler.php">
+                <p><b>Введите текст</b></p>
+                <p><input type="text" name="comment">
+                 <input type="button" value="ОК" onClick="dataField(this.form)"></p>
+              </form></td>
+            <td>Определяет уникальное имя элемента формы. Как правило, это имя используется при отправке данных на сервер или для доступа к введенным данным поля через скрипты.</td>
+        </tr>
+        <tr>
+            <td>pattern</td>
+            <td>&lt;input type="email" pattern="выражение"&gt;</td>
+            <td><form>
+                <p>Введите телефон в формате 2-xxx-xxx, где вместо x 
+                должна быть цифра:</p>
+                <p><input type="tel" pattern="2-[0-9]{3}-[0-9]{3}"></p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Указывает регулярное выражение, согласно которому требуется вводить и проверять данные в поле формы. Если присутствует атрибут pattern, то форма не будет отправляться, пока поле не будет заполнено правильно.</td>
+        </tr>
+        <tr>
+            <td>placeholder</td>
+            <td><input placeholder="строка"></td>
+            <td><form action="handler.php">
+                <p><input type=search placeholder="Введите текст для поиска">
+                <input type="submit" value="Искать"></p>
+               </form> </td>
+            <td>Выводит текст внутри поля формы, который исчезает при получении фокуса.</td>
+        </tr>
+        <tr>
+            <td>readonly</td>
+            <td>&lt;input type="text" readonly&gt;</td>
+            <td><form action="handler.php">
+                <p><input type="text" name="comment" size="40" 
+                value="Введенный текст не может изменяться"
+                readonly></p>
+              </form></td>
+            <td>
+                Когда к тегу &lt;input&gt; добавляется атрибут readonly, текстовое поле не может изменяться пользователем, в том числе вводиться новый текст или модифицироваться существующий. Тем не менее, состояние и содержимое поля можно менять с помощью скриптов.</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>&lt;input required&gt;</td>
+            <td> <form action="">
+                <p><input name="user" required placeholder="Ваше имя"></p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>&lt;input type="text" size="ширина"&gt;</td>
+            <td>...</td>
+            <td>Ширина текстового поля, которое определяется числом символов моноширинного шрифта. Иными словами, ширина задается количеством близстоящих букв одинаковой ширины по горизонтали. Если размер шрифта изменяется с помощью стилей, ширина также соответственно меняется.</td>
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>&lt;input type="image" src="URL"&gt;</td>
+            <td>input type="image" src="../Image/Xl2oV-GlkE9T7yH0wLv_iNoXa0GAcxb1pM1DfoTYg5H-2ZMwZRsop6ojMubKq0dJi4Nw7TiH3in43VSRwsnOEpR3.jpg"</td>
+            <td>Адрес графического файла, который будет отображаться на веб-странице в поле с изображением. Наиболее популярны файлы в формате GIF и JPEG.</td>
+        </tr>
+        <tr>
+            <td>step</td>
+            <td>&lt;input type="number" step="число"&gt;</td>
+            <td><form action="handler.php">
+                <p><input type="range" min="0" max="10" step="2">
+               </form></td>
+            <td>Устанавливает шаг изменения числа для ползунков и полей ввода чисел.</td>
+        </tr>
+        <tr>
+            <td>tabindex</td>
+            <td>&lt;input tabindex="число"&gt;</td>
+            <td>...</td>
+            <td>Атрибут tabindex определяет последовательность перехода между элементами при нажатии на клавишу Tab</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>&lt;input type="button|checkbox|file|hidden|image|password|radio|reset|submit|text"&gt;</td>
+            <td> <form action="input10.php">
+                <p><input type="radio" name="drink" value="rad1"> Пиво<Br>
+                <input type="radio" name="drink" value="rad2"> Чай<Br>
+                <input type="radio" name="drink" value="rad3"> Кофе</p>
+                <p><input type="image" src="images/imgbutton.gif"></p>
+               </form></td>
+            <td>Сообщает браузеру, к какому типу относится элемент формы.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>&lt;input type="..." value="значение"&gt;</td>
+            <td> <form action="input12.php">
+                <p><b>Как по вашему мнению расшифровывается аббревиатура "ОС"?</b></p>
+                <p><input type="radio" name="answer" value="a1">Офицерский 
+                состав<Br>
+                <input type="radio" name="answer" value="a2">Операционная 
+                система<Br>
+                <input type="radio" name="answer" value="a3">Большой 
+                полосатый мух</p>
+                <p><input type="submit" value="Отправить"></p>
+              </form></td>
+            <td><p>Определяет значение элемента формы, которое будет отправлено на сервер или получено с помощью клиентских скриптов. На сервер отправляется пара «имя=значение», где имя задается атрибутом name тега &lt;input&gt;, а значение — атрибутом value.</p>
+            <p>В зависимости от типа элемента атрибут value выступает в следующей роли:</p>
+        <ul>
+            <li>для кнопок (input type="button | reset | submit") устанавливает текстовую надпись на них;</li>
+            <li>для текстовых полей (input type="password | text") указывает предварительно введенную строку. Пользователь может стирать текст и вводить свои символы, но при использовании в форме кнопки Reset пользовательский текст очищается и восстанавливается введенный в атрибуте value;</li>
+            <li>для флажков и переключателей (input type="checkbox | radio") уникально определяет каждый элемент, с тем, чтобы клиентская или серверная программа могла однозначно установить, какой пункт выбрал пользователь.</li>
+            <li>для файлового поля (input type="file") не оказывает влияние.</li>
+        </ul></td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
