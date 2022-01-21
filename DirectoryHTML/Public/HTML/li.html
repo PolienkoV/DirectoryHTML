@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li</title>
+</head>
+<body>
+    <p><h1>Тег &lt;li&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;li&gt; определяет отдельный элемент списка. Внешний тег &lt;ul&gt; или &lt;ol&gt; устанавливает тип списка — маркированный или нумерованный.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>type</td>
+            <td>&lt;li type="disc | circle | square"&gt;...</li>
+                &lt;li type="A | a | I | i | 1"&gt;...</li></td>
+            <td><ul>
+                <li type="square">Чебурашка</li>
+                <li>Крокодил Гена</li>
+                <li type="circle">Шапокляк</li>
+               </ul></td>
+            <td>Устанавливает вид маркера. Тип маркера и его значение зависит от внешнего контейнера lt;ul&gt; или lt;ol&gt;.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>&lt;li value="число"&gt;...&lt;/li&gt;</td>
+            <td> <ol>
+                <li type="I" value="48">Чебурашка</li>
+                <li type="I">Крокодил Гена</li>
+                <li type="I">Шапокляк</li>
+              </ol></td>
+            <td>Атрибут value устанавливает номер, с которого будет начинаться список. value применяется только для нумерованных списков, когда тег &lt;li&gt; находится внутри контейнера &lt;ol&gt;. При этом не имеет значения, какой тип списка установлен с помощью type, атрибут value одинаково работает и с римскими и с арабскими числами.</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
