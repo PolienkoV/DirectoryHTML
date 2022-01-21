@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+</head>
+<body>
+    <p><h1>Тег &lt;link&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Устанавливает связь с внешним документом вроде файла со стилями или со шрифтами. В отличие от тега &lt;a&gt;, тег &lt;link&gt; размещается всегда внутри контейнера &lt;head&gt; и не создает ссылку.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>charset</td>
+            <td>&lt;link charset="кодировка"&gt;</td>
+            <td>&lt;link href="okinawa.html" rel="parent" charset="euc-jp"&gt;</td>
+            <td>Указывает кодировку документа на который ссылается тег &lt;link&gt;.</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td>&lt;link href="URL"&gt;</td>
+            <td><link href="http://www.htmlbook.ru/ie/rus/x3.css"> </td>
+            <td>Путь к файлу, на который делается ссылка (URL).</td>
+        </tr>
+        <tr>
+            <td>media</td>
+            <td>&lt;link media="all|braille|handheld|print|screen|speech|projection|tty|tv"&gt;</td>
+            <td>...</td>
+            <td><p>Определяет устройство, для которого следует применять стилевое оформление. Это позволяет сделать разный стиль для отображения документа на экране монитора и при его печати. Допускается писать несколько значений через запятую.</p>
+            <dl>
+                <dt>all</dt>
+                <dd>Все устройства.</dd>
+                <dt>braille</dt>
+                <dd>Устройства, основанные на системе Брайля, предназначены для слепых людей.</dd>
+                <dt>handheld</dt>
+                <dd>Наладонники, смартфоны, устройства с малой шириной экрана.</dd>
+                <dt>print</dt>
+                <dd>Печатающее устройство вроде принтера.</dd>
+                <dt>screen</dt>
+                <dd>Экран монитора.</dd>
+                <dt>speech</dt>
+                <dd>Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда же входят речевые браузеры.</dd>
+                <dt>projection</dt>
+                <dd>Проектор</dd>
+                <dt>tty</dt>
+                <dd>Телетайпы, терминалы, портативные устройства с ограниченными возможностями экрана. Для них не должны использоваться пикселы в качестве единиц измерения.</dd>
+                <dt>tv</dt>
+                <dd>Телевизор</dd>
+            </dl></td>
+        </tr>
+        <tr>
+            <td>rel</td>
+            <td>&lt;link rel="тип"&gt;</td>
+            <td><link rel="stylesheet" href="hb.css"></td>
+            <td>Атрибут rel определяет отношения между текущим документом и файлом, на который делается ссылка. Это необходимо, чтобы браузер знал, как использовать подключаемый документ.</td>
+        </tr>
+        <tr>
+            <td>sizes</td>
+            <td>&lt;link rel="icon" sizes="<ширина>X<высота>"&gt;</td>
+            <td><link rel="icon" href="images/android.ico" sizes="48x48" type="image/x-icon">
+                <link rel="icon" href="images/android.png" sizes="16x16" type="image/png"></td>
+            <td>Указывает размер иконок для визуального отображения. Сама иконка может применяться браузером для отображения в адресной строке, при сохранении в избранное, а также поисковыми системами для придания наглядности результатам поиска (именно так поступает Яндекс).</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>&lt;link type="MIME-тип"&gt;</td>
+            <td><link rel="stylesheet" type="text/css" href="/styles/htmlbook.css"></td>
+            <td>Сообщает браузеру, какой MIME-тип данных используется для внешнего документа. Как правило, применяется для того, чтобы указать, что подключаемый файл содержит CSS.</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
