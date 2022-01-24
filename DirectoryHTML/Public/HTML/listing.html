@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listing</title>
+</head>
+<body>
+    <p><h1>Тег &lt;listing&gt;</h1></p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>...</td>
+            <td>&lt;listing&gt;Текст&lt;/listing&gt;</td>
+            <td> <p>Пример программы</p>
+                <listing>
+                 while (<>) {
+                   $org=$_;
+                   s/\\["']//g;
+                   s/\/\/[^:].*//;
+                   s/\/\*.*\*\///g;
+                   if ($comment == 1) {
+                     if (s/.*\*\///) {
+                       $comment = 0;
+                     }
+                     else {
+                       next;
+                     }
+                   }
+                   if (s/\/\*.*//) {
+                     $comment = 1;
+                   }
+                   if (/^\s*#/) {
+                     next;
+                   }
+                 }</listing></td>
+            <td>Предназначен для вывода листинга программ или кода. Отображает содержимое моноширинным шрифтом уменьшенного размера.</td>
+        </tr>
+    </table>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
