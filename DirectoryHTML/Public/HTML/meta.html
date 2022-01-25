@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meta</title>
+</head>
+<body>
+    <p><h1>Тег &lt;meta&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>&lt;meta&gt; определяет метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем. Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных. Разрешается использовать более чем один метатег, все они размещаются в контейнере &lt;head&gt;. Как правило, атрибуты любого метатега сводятся к парам «имя=значение», которые определяются ключевыми словами content, name или http-equiv.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>charset</td>
+            <td>&lt;meta charset="кодировка"&gt;</td>
+            <td><p>Типовой документ.</p></td>
+            <td>Указывает кодировку документа. Атрибут введен в HTML5 и предназначен для сокращения формы тега &lt;meta&gt;, которая задавала кодировку в предыдущих версиях HTML и XHTML.</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>&lt;meta content="..."&gt;</td>
+            <td><head>
+                <title>Тег META, атрибут content</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+               </head> 
+               <body>
+                <p>...</p>
+               </body></td>
+            <td>content устанавливает значение атрибута, заданного с помощью name или http-equiv. Атрибут content может содержать более одного значения, в этом случае они разделяются запятыми или точкой с запятой.</td>
+        </tr>
+        <tr>
+            <td>http-equiv</td>
+            <td>&lt;meta http-equiv="..."&gt;</td>
+            <td> <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>Тег META, атрибут http-equiv</title>
+                <meta http-equiv="expires" content="Sun, 01 Jan 2013 07:01:00 GMT">
+               </head> 
+               <body>
+                 <p>...</p>
+               </body></td>
+            <td>Браузеры преобразовывают значение атрибута http-equiv, заданное с помощью content, в формат заголовка ответа HTTP и обрабатывают их, как будто они прибыли непосредственно от сервера.
+                <dl>
+                    <dt>Content-Type</dt>
+                    <dd>Тип кодировки документа.</dd>
+                    <dt>expires</dt>
+                    <dd>Устанавливает дату и время, после которой информация в документе будет считаться устаревшей.</dd>
+                    <dt>pragma</dt>
+                    <dd>Способ кэширования документа.</dd>
+                    <dt>refresh</dt>
+                    <dd>Загрузить другой документ в текущее окно браузера.</dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>&lt;meta name="..."&gt;</td>
+            <td> <head>
+                <title>Тег META, атрибут name</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <meta name="keywords" 
+                  content="HTML, META, метатег, тег, поисковая система"> 
+              </head> 
+              <body>
+                <p>...</p>
+              </body></td>
+            <td>Устанавливает идентификатор метатега для пары «имя=значение». Одновременно использовать атрибуты name и http-equiv не допускается.
+                <dl>
+                    <dt>author</dt>
+                    <dd>Имя автора документа.</dd>
+                    <dt>description</dt>
+                    <dd>Описание текущего документа.</dd>
+                    <dt>keywords</dt>
+                    <dd>Список ключевых слов, встречающихся на странице.</dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
