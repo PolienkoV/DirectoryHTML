@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meter</title>
+</head>
+<body>
+    <p><h1>Тег &lt;meter&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Используется для вывода значения в некотором известном диапазоне. Используется преимущественно для отображения числовых значений, например, количества результатов поиска, объема жидкости, давления и др.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>value</td>
+            <td>&lt;meter value="значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="36.6" min="35" max="42">36,6 градусов</meter></p></td>
+            <td>Устанавливает значение единицы измерения. Значение должно быть в диапазоне, задаваемым атрибутами min и max.</td>
+        </tr>
+        <tr>
+            <td>high</td>
+            <td>&lt;meter value="значение" high="высокое значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="-20" min="-60" max="40" low="0" high="28"></meter></p></td>
+            <td>Определяет предел, при достижении которого значение считается высоким.</td>
+        </tr>
+        <tr>
+            <td>low</td>
+            <td>&lt;meter value="значение" low="низкое значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="-20" min="-60" max="40" low="0" high="28"></meter></p></td>
+            <td>Определяет предел, при достижении которого значение считается низким.</td>
+        </tr>
+        <tr>
+            <td>max</td>
+            <td>&lt;meter value="значение" max="максимальное значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="36.6" min="35" max="42">36,6 градусов</meter></p></td>
+            <td>Задает максимальный порог, который может достигать значение.</td>
+        </tr>
+        <tr>
+            <td>min</td>
+            <td>&lt;meter value="значение" min="минимальное значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="36.6" min="35" max="42">36,6 градусов</meter></p></td>
+            <td>В качестве значения указывается целое или дробное число. Обязательно должно соблюдаться условие min ≤ value ≤ max.</td>
+        </tr>
+        <tr>
+            <td>optimum</td>
+            <td>&lt;meter value="значение" optimum="оптимальное значение"&gt;&lt;/meter&gt;</td>
+            <td><p><meter value="39" optimum="36.6" min="35" max="42"></meter></p></td>
+            <td>Определяет наилучшее или оптимальное значение</td>
+        </tr>
+    </table>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
