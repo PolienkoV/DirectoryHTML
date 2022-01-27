@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option</title>
+</head>
+<body>
+    <p><h1>Тег &lt;option&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;option&gt; определяет отдельные пункты списка, создаваемого с помощью контейнера &lt;select&gt;. Ширина списка определяется самым широким текстом, указанным в теге &lt;option&gt;, а также может изменяться с помощью стилей. Если планируется отправлять данные списка на сервер, то требуется поместить элемент &lt;select&gt; внутрь формы. Это также необходимо, когда к данным списка идет обращение через скрипты.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>disabled</td>
+            <td>&lt;option disabled&gt;...&lt;/option&gt;</td>
+            <td>...</td>
+            <td>Блокирует элемент списка для его выбора.</td>
+        </tr>
+        <tr>
+            <td>label</td>
+            <td>&lt;option label="текст"&gt;...&lt;/option&gt;</td>
+            <td><form>
+                <p>Кто написал полонез Огинского?</p>
+                <select name="question">
+                 <option label="Бах" value="1">Иоганн Себастьян Бах</option>
+                 <option label="Бетховен" value="2">Людвиг ван Бетховен</option>
+                 <option label="Шопен" value="3">Фредерик Шопен</option>
+                 <option label="Огинский" value="4">Михаил Клеофас Огинский</option>
+                </select>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Атрибут предназначен для указания метки пункта списка, сокращённой по сравнению с текстом внутри &lt;option&gt;. Если атрибут label присутствует, то текст внутри тега &lt;option&gt; игнорируется и в списке выводится значение label.</td>
+        </tr>
+        <tr>
+            <td>selected</td>
+            <td>&lt;option selected&gt;...&lt;/option&gt;</td>
+            <td><form action="option1.php">
+                <p><select name="hero">
+                <option>Выберите героя</option>
+                <option value="t1">Чебурашка</option>
+                <option value="t2">Крокодил Гена</option>
+                <option value="t3">Шапокляк</option>
+                <option selected value="t4">Крыса Лариса</option>
+                </select>
+                <input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Делает текущий пункт списка выделенным. Если у тега &lt;select&gt; добавлен атрибут multiple, то можно выделять более одного пункта</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>&lt;option value="значение"&gt;...&lt;/option&gt;</td>
+            <td><form action="option1.php">
+                <p><select name="hero">
+                <option>Выберите героя</option>
+                <option value="Чебурашка">Чебурашка</option>
+                <option value="Крокодил Гена">Крокодил Гена</option>
+                <option value="Шапокляк">Шапокляк</option>
+                <option value="Крыса Лариса">Крыса Лариса</option>
+                </select>
+                <input type="button" value="OK" onClick="dataSelect(this.form)"></p>
+               </form></td>
+            <td>Определяет значение пункта списка, которое будет отправлено на сервер. На сервер отправляется пара «имя=значение», где имя задается атрибутом name тега &lt;select&gt;, а значение — атрибутом value выделенных пунктов списка. Значение может как совпадать с текстом пункта, так быть и самостоятельным. Также атрибут value применяется для получения значений данных через скрипты.</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
