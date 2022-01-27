@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ol</title>
+</head>
+<body>
+    <p><h1>Тег &lt;ol&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;ol&gt; устанавливает нумерованный список. Каждый элемент списка должен начинаться с тега &lt;li&gt;. Если к тегу &lt;ol&gt; применяется таблица стилей, то элементы &lt;li&gt; наследуют эти свойства.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+    <tr>
+        <td>type</td>
+        <td>&lt;ol type="A | a | I | i | 1"&gt;...&lt;/ol&gt;</td>
+        <td><ol type="a">
+            <li>Чебурашка</li>
+            <li>Крокодил Гена</li>
+            <li>Шапокляк</li>
+           </ol></td>
+        <td><p>Устанавливает вид маркера.</p>
+        <p>Нумерованные списки представляют собой набор элементов с их порядковыми номерами. Вид и тип нумерации зависит от атрибутов тега &lt;ol&gt;, который и используется для создания списка. В качестве маркеров могут быть следующие значения:</p>
+    <ol>
+        <li>заглавные латинские буквы;</li>
+        <li>строчные латинские буквы;</li>
+        <li>заглавные римские цифры;</li>
+        <li>строчные римские цифры;</li>
+        <li>арабские цифры.</li>
+    </ol></td>
+    </tr>
+    <tr>
+        <td>reversed</td>
+        <td>&lt;ol reversed&gt;
+            ...
+           &lt;/ol&gt;</td>
+        <td><ol reversed>
+            <li>Декабрь</li>
+            <li>Ноябрь</li>
+            <li>Октябрь</li>
+            <li>Сентябрь</li>
+            <li>Август</li>
+            <li>Июль</li>
+            <li>Июнь</li>
+            <li>Май</li>
+            <li>Апрель</li>
+            <li>Март</li>
+            <li>Февраль</li>
+            <li>Январь</li>
+           </ol></td>
+        <td>Меняет нумерацию в списке на обратный порядок, вместо 1,2,3 будет выводиться 3,2,1.</td>
+    </tr>
+    <tr>
+        <td>start</td>
+        <td>&lt;ol start="число"&gt;
+            &lt;li&gt;Элемент списка&lt;/li&gt;
+           &lt;/ol&gt;</td>
+        <td><ol type="I" start="4">
+            <li>Чебурашка</li>
+            <li>Крокодил Гена</li>
+            <li>Шапокляк</li>
+          </ol></td>
+        <td>Атрибут start устанавливает номер, с которого будет начинаться список. При этом не имеет значения, какой тип списка установлен с помощью type, атрибут start одинаково работает и с римскими и с арабскими числами.</td>
+    </tr>
+    </table>
+</body>
+Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</html>
