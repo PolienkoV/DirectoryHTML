@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optgroup</title>
+</head>
+<body>
+    <p><h1>Тег &lt;optgroup&gt;</h1></p>
+    <p><h3>Описание</h3></p>
+    <p>Тег &lt;optgroup&gt; представляет собой контейнер, внутри которого располагаются теги &lt;optgroup&gt; объединенные в одну группу. Особенностью тега &lt;optgroup&gt; является то, что он не выделяется как обычный элемент списка, акцентируется с помощью жирного начертания, а все элементы, входящие в этот контейнер, смещаются вправо от своего исходного положения.</p>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>disabled</td>
+            <td>&lt;optgroup disabled&gt;...&lt;/optgroup&gt;</td>
+            <td>  <form>
+                <p><select>
+                 <optgroup label="Цвет">
+                  <option value="c1">Апельсиновый</option>
+                  <option value="c2">Лимонный</option>
+                  <option value="c3">Персиковый</option>
+                 </optgroup>
+                 <optgroup label="Тон" disabled>
+                  <option value="s1">Светлый</option>
+                  <option value="s2">Нормальный</option>
+                  <option value="s3">Темный</option>
+                 </optgroup>
+                </select></p>
+                <p><input type="submit" value="Отправить"></p>
+               </form></td>
+            <td>Блокирует доступ к группе списка, при этом группа отображается другим цветом (обычно серым) и недоступна для выбора.</td>
+        </tr>
+        <tr>
+            <td>label</td>
+            <td>&lt;optgroup label="текст"&gt;...&lt;/optgroup&gt;</td>
+            <td>...</td>
+            <td>Текст, который будет входить в список в виде заголовка группы. Это обычная текстовая строка без всяких кодов HTML</td>
+        </tr>
+    </table>
+    Также для этого тега доступны <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> и <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <p><h2><a href="index.html">Оглавление</a></h2></p>
+</body>
+</html>
