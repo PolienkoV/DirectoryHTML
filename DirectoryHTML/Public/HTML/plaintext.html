@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plaintext</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;plaintext&gt;</h1>
+    </header>
+    <main>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>...</td>
+                <td>&lt;plaintext&gt;Текст&lt;/plaintext&gt;</td>
+                <td>
+                    <plaintext>
+                    <h1>Демонстрация метода Подборского</h1>
+                    while (<>) {
+                      $org=$_;
+                      s/\\["']//g;
+                      s/\/\/[^:].*//;
+                      s/\/\*.*\*\///g;
+                      if ($comment == 1) {
+                        if (s/.*\*\///) {
+                          $comment = 0;
+                        }
+                        else {
+                          next;
+                        }
+                      }
+                      if (s/\/\*.*//) {
+                        $comment = 1;
+                      }
+                      if (/^\s*#/) {
+                        next;
+                      }
+                    }</plaintext>
+                </td>
+                <td>
+                    Тег &lt;plaintext&gt; отображает содержимое контейнера «как есть». Пока тег &lt;plaintext&gt; не закрыт, все теги внутри него отображаются как обычный текст. Несмотря на то, что все браузеры поддерживают этот тег, он не входит в спецификацию HTML и его использование осуждается.
+                </td>
+            </tr>
+        </table>
+    </main>
+    Также для этого тега доступны 
+    <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> 
+    и
+    <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <footer>
+        <p><h2><a href="index.html">Оглавление</a></h2></p>
+    </footer>
+</body>
+</html>
