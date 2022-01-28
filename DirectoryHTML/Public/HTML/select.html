@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;select&gt;</h1>
+        <h3>Описание</h3>
+        <p>
+            Тег &lt;select&gt; позволяет создать элемент интерфейса в виде раскрывающегося списка, а также список с одним или множественным выбором, как показано далее. Конечный вид зависит от использования атрибута size тега &lt;select&gt;, который устанавливает высоту списка. Ширина списка определяется самым широким текстом, указанным в теге &lt;option&gt;, а также может изменяться с помощью стилей. Каждый пункт создается с помощью тега &lt;option&gt;, который должен быть вложен в контейнер &lt;select&gt;. Если планируется отправлять данные списка на сервер, то требуется поместить элемент &lt;select&gt; внутрь формы. Это также необходимо, когда к данным списка идет обращение через скрипты.
+        </p>
+    </header>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>accesskey</td>
+            <td>
+                &lt;select accesskey="c"&gt;
+                    ...
+                    &lt;/select&gt;
+            </td>
+            <td>...</td>
+            <td>
+                Атрибут accesskey позволяет перейти к списку с помощью некоторого сочетания клавиш с заданной в атрибуте буквой или цифрой. Браузеры при этом используют различные комбинации клавиш. Например, для accesskey="s" работают следующие сочетания.
+                <ul>
+                    <li>Internet Explorer: Alt + S</li>
+                    <li>Chrome: Alt + S</li>
+                    <li>Opera: Shift + Esc, S</li>
+                    <li>Safari: Alt + S</li>
+                    <li>Firefox: Shift + Alt + S</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>autofocus</td>
+            <td>
+                &lt;select autofocus&gt;
+                    ...
+                    &lt;/select&gt;
+            </td>
+            <td>
+                <form> 
+                    <select name="num" autofocus>
+                     <option value="1">uno</option>
+                     <option value="2">dos</option>
+                     <option value="3">tres</option>
+                     <option value="4">cinco</option>
+                    </select>
+                   </form>
+            </td>
+            <td>
+                Атрибут autofocus устанавливает, что список получает фокус после загрузки страницы, при этом список становится доступным для выбора пунктов, например, с помощью клавиатуры.
+            </td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td>&lt;select disabled&gt;...&lt;/select&gt;</td>
+            <td>
+                <form action="handler.php">
+                    <p><select disabled name="hero">
+                    <option selected>Выберите героя</option>
+                    <option value="t1">Чебурашка</option>
+                    <option value="t2">Крокодил Гена</option>
+                    <option value="t3">Шапокляк</option>
+                    <option value="t4">Крыса Лариса</option>
+                    </select></p>
+                   </form>
+            </td>
+            <td>
+                Блокирует доступ и изменение элементов списка. Блокированный список не может получить фокус через курсор или клавиатуру, быть изменен, значение такого списка не передается на сервер.
+            </td>
+        </tr>
+        <tr>
+            <td>form</td>
+            <td>&lt;select form="идентификатор"&gt;...&lt;/select&gt;</td>
+            <td>
+                <form id="data" action="handler.php">
+                </form>
+                <p><select name="num" form="data">
+                  <option value="1">uno</option>
+                  <option value="2">dos</option>
+                  <option value="3">tres</option>
+                  <option value="4">cinco</option>
+                </select></p>
+                <p><input type="submit" form="data" value="Отправить"></p>
+            </td>
+            <td>
+                Связывает список с формой по её идентификатору. Такая связь необходима в случае, когда список располагается за пределами &lt;form&gt;.
+            </td>
+        </tr>
+        <tr>
+            <td>multiple</td>
+            <td>
+                &lt;select multiple&gt;...&lt;/select&gt;
+            </td>
+            <td>
+                <form action="handler.php">
+                    <p><select multiple size="1">
+                    <option>Чебурашка</option>
+                    <option>Крокодил Гена</option>
+                    <option>Шапокляк</option>
+                    <option>Крыса Лариса</option>
+                    </select></p>
+                  </form>
+            </td>
+            <td>
+                Наличие атрибута multiple сообщает браузеру отображать содержимое элемента &lt;select&gt; как список множественного выбора. Конечный вид списка зависит от используемого атрибута size и браузера. При size="1" Firefox устанавливает высоту списка равной одному пункту, Safari и Chrome игнорируют size, Opera превращает список в «крутилку».
+                    Для выбора нескольких значений списка применяются клавиши Ctrl и Shift совместно с курсором мыши.
+            </td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>&lt;select name="имя"&gt;...&lt;/select&gt;</td>
+            <td>
+                <form action="handler.php">
+                    <p><select name="hero">
+                     <option>Выберите героя</option>
+                     <option value="Чебурашка">Чебурашка</option>
+                     <option value="Крокодил Гена">Крокодил Гена</option>
+                     <option value="Шапокляк">Шапокляк</option>
+                     <option value="Крыса Лариса">Крыса Лариса</option>
+                    </select>
+                    <input type="button" value="OK" onClick="dataSelect(this.form)"></p>
+                   </form>
+            </td>
+            <td>
+                Определяет уникальное имя элемента &lt;select&gt;. Как правило, это имя используется для доступа к данным через скрипты или для получения выбранного значения списка на сервере.
+            </td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>
+                &lt;select required&gt;
+                    ...
+                    &lt;/select&gt;
+            </td>
+            <td>
+                <form>
+                    <p>Какое растение в списке вечнозелёное?</p>
+                    <p><select name="pregunta" required>
+                     <option></option>
+                     <option value="1">Ольха</option>
+                     <option value="2">Берёза</option>
+                     <option value="3">Бузина</option>
+                     <option value="4">Тис</option>
+                    </select></p>
+                    <p><input type="submit" value="Отправить"></p>
+                   </form>
+            </td>
+            <td>
+                Устанавливает список обязательным для выбора перед отправкой формы на сервер. Если пункт списка не выбран, браузер выведет сообщение, а форма отправлена не будет. Вид и содержание сообщения зависит от браузера и меняться пользователем не может.
+            </td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>&lt;select size="число"&gt;...&lt;/select&gt;</td>
+            <td>
+                <form action="handler.php">
+                    <p><select size="1">
+                     <option selected>Выберите героя</option>
+                     <option>Чебурашка</option>
+                     <option>Крокодил Гена</option>
+                     <option>Шапокляк</option>
+                     <option>Крыса Лариса</option>
+                    </select></p>
+                   </form>
+            </td>
+            <td>
+                Устанавливает высоту списка. Если значение атрибута size равно единице, то список превращается в раскрывающийся. При добавлении атрибута multiple к тегу &lt;select&gt; при size="1" список отображается как «крутилка». Во всех остальных случаях получается список с одним или множественным выбором.
+            </td>
+        </tr>
+        <tr>
+            <td>tabindex</td>
+            <td>
+                &lt;select tabindex="число"&gt;
+                    ...
+                    &lt;/select&gt;
+            </td>
+            <td>...</td>
+            <td>Атрибут tabindex определяет последовательность перехода между элементами при нажатии на клавишу Tab.</td>
+        </tr>
+    </table>
+    Также для этого тега доступны 
+    <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> 
+    и
+    <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    <footer>
+        <p><h2><a href="index.html">Оглавление</a></h2></p>
+    </footer>
+</body>
+</html>
