@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;script&gt;</h1>
+        <h3>Описание</h3>
+        <p>
+            Тег &lt;script&gt; предназначен для описания скриптов, может содержать ссылку на программу или ее текст на определенном языке. Скрипты могут располагаться во внешнем файле и связываться с любым HTML-документом. Такой подход позволяет использовать одни и те же общие функции на многих веб-страницах и ускоряет их загрузку, т.к. внешний файл кэшируется при первой загрузке, и скрипт вызывается быстрее при последующих вызовах.
+            &lt;script&gt; может располагаться в заголовке или теле HTML-документа в неограниченном количестве. В большинстве случаев местоположение скрипта никак не сказывается на работу программы. Однако скрипты, которые должны выполняться в первую очередь, обычно помещают в заголовок документа.
+        </p>
+    </header>
+    <table border="1" width="100%" cellpadding="5">
+        <col width="100">
+        <col span="2" width="400">
+        <col width="1000" align="center">
+        <tr>
+            <td>async</td>
+            <td>&lt;script async&gt;...&lt;/script&gt;</td>
+            <td>
+                <script async src="scripts/async.js"></script>
+                 </head>
+                 <body>
+                    <p>Пример страницы</p>
+                 </body>
+            </td>
+            <td>
+                При наличии атрибута async браузер при возможности запускает скрипт асинхронно. Это означает, что указанный в атрибуте src файл будет выполняться без ожидания загрузки и отображения веб-страницы. В то же время и страница не ожидает результата выполнения скрипта, а продолжает загружаться как обычно.
+            </td>
+        </tr>
+        <tr>
+            <td>defer</td>
+            <td>&lt;script defer&gt;...&lt;/script&gt;</td>
+            <td>
+                <script defer>
+                    document.forms[0].textField.value = 17;
+                  </script>
+                 </head>
+                 <body>
+                
+                  <form action="handler.php">
+                   <p>Введите ваш возраст</p>
+                   <p><input type="text" name="textField"></p>
+                  </form>
+                
+                 </body>
+            </td>
+            <td>                
+                Атрибут defer откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена полностью.
+            </td>
+        </tr>
+        <tr>
+            <td>language</td>
+            <td>&lt;script language="JavaScript | JScript | VBS | VBScript"&gt;...&lt;/script&gt;</td>
+            <td>
+                <script type="text/vbscript" language="VBScript"> VB = 1 </script>
+                <script type="text/javascript" language="JavaScript"> JS = 1; </script>
+                <script type="text/javascript" language="JavaScript1.1"> JS11 = 1; </script>
+                <script type="text/javascript" language="JavaScript1.2"> JS12 = 1; </script>
+                <script type="text/javascript" language="JavaScript1.3"> JS13 = 1; </script>
+                <script type="text/javascript" language="JavaScript1.4"> JS14 = 1; </script>
+                <script type="text/javascript" language="JavaScript1.5"> JS15 = 1; </script> 
+                <script type="text/javascript" language="JavaScript">
+                  document.write("<b>Поддерживаемые языки:<\/b><br>");
+                  if(window.JS) document.write("JavaScript<br>");
+                  if(window.JS11) document.write("JavaScript 1.1<br>");
+                  if(window.JS12) document.write("JavaScript 1.2<br>");
+                  if(window.JS13) document.write("JavaScript 1.3<br>");
+                  if(window.JS14) document.write("JavaScript 1.4<br>");
+                  if(window.JS15) document.write("JavaScript 1.5<br>");
+                  if(window.VB) document.write("Visual Basic<br>");
+                </script>
+            </td>
+            <td>
+                Атрибут language указывает язык написания скрипта. Данный атрибут осуждается, а вместо него следует применять type, который указывает MIME-тип для определенного языка.
+            </td>
+        </tr>
+            <tr>
+                <td>src</td>
+                <td>&lt;script src="URL"&gt;...&lt;/script&gt;</td>
+                <td>
+                    <script src="/scripts/browser.js"></script>
+                </td>
+                <td>
+                    <p>
+                        Импортирует файл со скриптами из внешнего файла. Как только внешние инструкции полностью загружаются, браузер обрабатывает их, словно они были внедрены в текущий документ. Файлы со скриптами JavaScript обычно имеют расширение js и могут размещаться в любом доступном месте.
+                    </p>
+                    <p>
+                        Преимуществ использования внешних файлов несколько. Внешний файл после первого обращения сохраняется в кэше браузера и при последующих вызовах загружается быстрее. Кроме того, вызываемые функции удобно править в одном месте и код проще контролировать. Это особенно актуально, когда множество веб-страниц используют одни и те же скрипты.
+                    </p>
+                </td>
+            </tr>
+        <tr>
+            <td>type</td>
+            <td>&lt;script type="MIME-тип"&gt;...&lt;/script&gt;</td>
+            <td>...</td>
+            <td>Указывает тип MIME для определенного языка.</td>
+        </tr>
+    </table>
+    <footer>
+             <p>
+                <h2><a href="index.html">Оглавление</a></h2>
+             </p>
+    </footer>
+</body>
+</html>
