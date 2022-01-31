@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>source</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;source&gt;</h1>
+    </header>
+    <main>
+        <h3>Описание</h3>
+        <p>Вставляет звуковой или видеофайл для тегов &lt;audio&gt; и &lt;video&gt;. Обобщенно такие файлы называются медийными.</p>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>media</td>
+                <td>&lt;audio&gt;
+                    &lt;source src="URL" media="all|braille|handheld|print|screen|speech|projection|tty|tv"&gt;
+                    &lt;/audio&gt;
+                </td>
+                <td>
+                    <video width="400" height="300" controls="controls">
+                        <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' media="handheld">
+                       </video>
+                </td>
+                <td>
+                    Определяет устройство, для которого будет воспроизводиться аудио или видеофайл.
+                    <dl>
+                        <dt>all</dt>
+                        <dd>Все устройства.</dd>
+                        <dt>braille</dt>
+                        <dd>Устройства, основанные на системе Брайля, предназначены для слепых людей.</dd>
+                        <dt>handheld</dt>
+                        <dd>Наладонники, смартфоны, устройства с малой шириной экрана.</dd>
+                        <dt>print</dt>
+                        <dd>Печатающее устройство вроде принтера.</dd>
+                        <dt>screen</dt>
+                        <dd>Экран монитора.</dd>
+                        <dt>speech</dt>
+                        <dd>Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда же входят речевые браузеры.</dd>
+                        <dt>projection</dt>
+                        <dd>Проектор</dd>
+                        <dt>tty</dt>
+                        <dd>Телетайпы, терминалы, портативные устройства с ограниченными возможностями экрана.</dd>
+                        <dt>tv</dt>
+                        <dd>Телевизор</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td>src</td>
+                <td>
+                    &lt;audio&gt;
+                        &lt;source src="URL"&gt;
+                       &lt;/audio&gt;
+                </td>
+                <td>...</td>
+                <td>Адрес аудио или видеофайла, который будет воспроизводиться на веб-странице</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>
+                    &lt;audio&gt;
+                        &lt;source src="URL" type='MIME-тип; codecs="кодек"'&gt;
+                        &lt;/audio&gt;
+                </td>
+                <td>
+                    Задает MIME-тип источника, а также аудио и видеокодек — так называется алгоритм хранения воспроизводимых данных
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p><h2><a href="index.html">Оглавление</a></h2></p>
+    </footer>
+</body>
+</html>
