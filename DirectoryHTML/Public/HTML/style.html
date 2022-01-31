@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stule</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;style&gt;</h1>
+    </header>
+    <main>
+        <h3>Описание</h3>
+        <p>
+            Тег &lt;style&gt; применяется для определения стилей элементов веб-страницы. Тег &lt;style&gt; необходимо использовать внутри контейнера &lt;head&gt;. Можно задавать более чем один тег &lt;style&gt;.
+        </p>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>media</td>
+                <td>&lt;style media="all|braille|handheld|print|screen|speech|projection|tty|tv"&gt;
+                    ...
+                   &lt;/style&gt;</td>
+                <td>
+                    <style media="screen">
+                        .window {
+                         background: #333;
+                         border: 1px solid red;
+                         font-size: 90%;
+                         color: #fc0;
+                         padding: 10px;
+                        }
+                      </style>
+                      <style media="print">
+                        .window {
+                         border: 1px solid black;
+                         font-family: Arial;
+                         font-size: 90%;
+                         font-weight: bold;
+                         color: black;
+                         padding: 10px
+                        }
+                      </style>
+                     </head>
+                     <body>
+                    
+                       <div class="window">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy 
+                        nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+                       </div>
+                    
+                     </body>
+                </td>
+                <td>
+                    <p>
+                        Устанавливает устройство вывода, для которого предназначена таблица стилей. Для каждого устройства — от карманного компьютера до принтера можно определить свой собственный стиль, который бы учитывал специфику устройства и подгонял под него вид веб-страницы.
+                    </p>
+                    <dl>
+                        <dt>all</dt>
+                        <dd>Все устройства.</dd>
+                        <dt>braille</dt>
+                        <dd>Устройства, основанные на системе Брайля, предназначены для слепых людей.</dd>
+                        <dt>handheld</dt>
+                        <dd>Наладонники, смартфоны, устройства с малой шириной экрана.</dd>
+                        <dt>print</dt>
+                        <dd>Печатающее устройство вроде принтера.</dd>
+                        <dt>screen</dt>
+                        <dd>Экран монитора.</dd>
+                        <dt>speech</dt>
+                        <dd>Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда же входят речевые браузеры.</dd>
+                        <dt>projection</dt>
+                        <dd>Проектор</dd>
+                        <dt>tty</dt>
+                        <dd>Телетайпы, терминалы, портативные устройства с ограниченными возможностями экрана. Для них не должны использоваться пикселы в качестве единиц измерения.</dd>
+                        <dt>tv</dt>
+                        <dd>Телевизор</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>&lt;style type="text/css"&gt;...&lt;/style&gt;</td>
+                <td>
+                    <style type="text/css">
+                        a:link { color: #003366; }
+                        a:visited { color: #660066; }
+                        a:hover { color: #800000; }
+                        a:active { color: #FF0000; } 
+                      </style>
+                     </head> 
+                     <body>
+                    
+                       <p><a href="lorem.html">Lorem ipsum dolor sit amet</a></p>
+                    
+                     </body>
+                </td>
+                <td>
+                    Сообщает браузеру, какой синтаксис использовать, чтобы правильно интерпретировать таблицу стилей. Как правило, браузеры корректно работают со стилями и при отсутствии этого атрибута, он необходим для некоторых старых браузеров, которые могут не распознать содержимое контейнера &lt;style&gt;.
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
