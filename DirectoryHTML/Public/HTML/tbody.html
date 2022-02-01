@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tbody</title>
+</head>
+
+<body>
+    <header>
+        <h1>Тег &lt;tbody&gt;</h1>
+    </header>
+    <main>
+        <h3>Описание</h3>
+        <p>
+            Элемент &lt;tbody&gt; предназначен для хранения одной или нескольких строк таблицы. Это позволяет создавать
+            структурные блоки, к которым можно применять единое оформление через стили, а также управлять их видом через
+            скрипты.
+
+            Допускается применять несколько тегов &lt;tbody&gt; внутри контейнера &lt;table&gt;. Доступны и другие виды
+            группировок строк — &lt;tfoot&gt; и &lt;thead&gt;, ни один из них не должен перекрываться с элементом
+            &lt;tbody&gt;.
+        </p>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>align</td>
+                <td>&lt;tbody align="left | center | right | justify"&gt;...&lt;/tbody&gt;</td>
+                <td>
+                    <table width="600" border="1" cellspacing="0">
+                        <thead align="center" style="background:#fc0">
+                            <tr>
+                                <td>Ячейка 1</td>
+                                <td>Ячейка 2</td>
+                            </tr>
+                        </thead>
+
+                        <tbody align="right">
+                            <tr>
+                                <td>Ячейка 3</td>
+                                <td>Ячейка 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    Задает выравнивание по горизонтали содержимого строк ячеек, которые расположены внутри элемента
+                    &lt;tbody&gt;. Если требуется применить разное выравнивание для каждой ячейки, воспользуйтесь
+                    стилями или используйте атрибут align для тега &lt;td&gt; или &lt;th&gt;.
+                </td>
+            </tr>
+            <tr>
+                <td>bgcolor</td>
+                <td>&lt;tbody bgcolor="цвет"&gt;...&lt;/tbody&gt;</td>
+                <td>
+                    <table width="600" border="1" cellspacing="0" bordercolor="#333333">
+                        <thead align="center" bgcolor="#ffcc00">
+                            <tr>
+                                <td>Ячейка 1</td>
+                                <td>Ячейка 2</td>
+                            </tr>
+                        </thead>
+
+                        <tbody align="right" bgcolor="silver">
+                            <tr>
+                                <td>Ячейка 3</td>
+                                <td>Ячейка 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    Устанавливает цвет фона ячеек, расположенных в контейнере &lt;tbody&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>
+                    &lt;table&gt;
+                    &lt;thead&gt; .... &lt;/thead&gt;
+                    &lt;tfoot&gt; ... &lt;/tfoot&gt;
+                    &lt;tbody char="c" align="char"&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt; ... &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;/table&gt;
+                </td>
+                <td>
+                    <table cellspacing="0" cellpadding="5" width="300">
+                        <thead>
+                            <tr>
+                                <td>Год</td>
+                                <td>Население, млн</td>
+                            </tr>
+                        </thead>
+                        <tbody align="char" char=",">
+                            <tr>
+                                <td>1897</td>
+                                <td>67,5 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1914</td>
+                                <td>89,9 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1917</td>
+                                <td>91,0 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1926</td>
+                                <td>92,7 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1939</td>
+                                <td>108,4 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1959</td>
+                                <td>117,2 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1970</td>
+                                <td>129,9 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1979</td>
+                                <td>137,4 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1989</td>
+                                <td>147,0 млн</td>
+                            </tr>
+                            <tr>
+                                <td>1996</td>
+                                <td>148,3 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2002</td>
+                                <td>145,6 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2006</td>
+                                <td>142,8 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2007</td>
+                                <td>142,2 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2008</td>
+                                <td>142,0 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td>141,9 млн</td>
+                            </tr>
+                            <tr>
+                                <td>2010</td>
+                                <td>141,93 млн</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    Атрибут char заставляет выравниваться содержимое ячеек внутри &lt;tbody&gt; по заданному символу.
+                    Эта возможность может пригодиться для выравнивания колонки чисел по точке или запятой. Работает
+                    только в том случае, если значение атрибута align установлено как char.
+                </td>
+            </tr>
+            <tr>
+                <td>charoff</td>
+                <td>
+                    &lt;table&gt;
+                    &lt;thead&gt; .... &lt;/thead&gt;
+                    &lt;tfoot&gt; ... &lt;/tfoot&gt;
+                    &lt;tbody char="c" align="char" charoff="число"&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt; ... &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;/table&gt;
+                </td>
+                <td>...</td>
+                <td>
+                    Если атрибут align установлен как char, а для атрибута char в качестве значения задан символ, то с
+                    помощью атрибута charoff можно смещать содержимое ячейки влево или вправо относительно заданного
+                    символа. Так, charoff="3" означает, что браузер должен сместить содержимое ячейки на три символа
+                    вправо, а charoff="-3" — сместить на три символа влево.
+                </td>
+            </tr>
+            <tr>
+                <td>valign</td>
+                <td>&lt;tbody valign="top | middle | bottom | baseline"&gt;...&lt;/tbody&gt;</td>
+                <td>
+                    <table width="600" border="1" cellspacing="0">
+                        <tbody align="right" valign="top">
+                            <tr>
+                                <td height="100">Ячейка 1</td>
+                                <td>Ячейка 2</td>
+                            </tr>
+                            <tr>
+                                <td height="100">Ячейка 3</td>
+                                <td>Ячейка 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    Устанавливает вертикальное выравнивание содержимого ячеек в контейнере &lt;tbody&gt;. По умолчанию
+                    контент ячейки располагается по ее вертикали в центре
+                </td>
+            </tr>
+        </table>
+        Также для этого тега доступны
+        <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a>
+        и
+        <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    </main>
+
+    <footer>
+        <p>
+        <h2><a href="index.html">Оглавление</a></h2>
+        </p>
+    </footer>
+</body>
+
+</html>
