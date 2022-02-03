@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tfoot</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;tfoot&gt;</h1>
+    </header>
+    <main>
+        <h3>Описание</h3>
+        <p>
+            Элемент &lt;tfoot&gt; предназначен для хранения одной или нескольких строк, которые представлены внизу таблицы. Хотя тег &lt;tfoot&gt; в исходном коде должен быть определен до тега &lt;tfoot&gt;, браузеры отображают его в самом низу таблицы.
+                В пределах таблицы разрешается использовать только один элемент &lt;tfoot&gt;.
+        </p>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>align</td>
+                <td>
+                    &lt;tfoot align="left | center | right | justify"&gt;...&lt;/tfoot&gt;
+                </td>
+                <td>
+                    <table width="600" border="1" cellspacing="0">
+                        <tfoot align="center" style="background: #fc0">
+                         <tr>
+                          <td colspan="2">Объединенная ячейка в TFOOT</td>
+                         </tr> 
+                        </tfoot>
+                    
+                        <tbody align="right">
+                         <tr>
+                          <td>Ячейка 1, расположенная в TBODY</td>
+                          <td>Ячейка 2, расположенная в TBODY</td> 
+                         </tr> 
+                        </tbody>
+                      </table>
+                </td>
+                <td>
+                    Задает выравнивание по горизонтали для всех ячеек в пределах &lt;tfoot&gt;. Если требуется применить разное выравнивание для каждой ячейки, воспользуйтесь стилями или используйте атрибут align для тега &lt;td&gt; или &lt;th&gt;.
+                </td>
+            </tr>
+            <tr>
+                <td>bgcolor</td>
+                <td>
+                    &lt;tfoot bgcolor="цвет"&gt;...&lt;/tfoot&gt;
+                </td>
+                <td>
+                    <table width="600" border="1" cellspacing="0" bgcolor="#f0f0f0">
+                        <tfoot align="center" bgcolor="#333333">
+                         <tr>
+                          <td colspan="2">Объединенная ячейка в TFOOT</td>
+                         </tr> 
+                        </tfoot>
+                     
+                        <tbody>
+                         <tr>
+                          <td>Ячейка 1, расположенная в TBODY</td>
+                          <td>Ячейка 2, расположенная в TBODY</td> 
+                         </tr> 
+                        </tbody>
+                       </table>
+                </td>
+                <td>
+                    Устанавливает цвет фона ячеек, расположенных в контейнере &lt;tfoot&gt;.
+                </td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>
+                    &lt;table&gt;
+                        &lt;thead&gt; .... &lt;/thead&gt;
+                        &lt;tfoot char="c" align="char"&gt; ... &lt;/tfoot&gt;
+                        &lt;tbody&gt;
+                         &lt;tr&gt;
+                          &lt;td&gt; ... &lt;/td&gt;
+                         &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                </td>
+                <td>...</td>
+                <td>
+                    Атрибут char заставляет выравниваться содержимое ячеек внутри &lt;tfoot&gt; по заданному символу. Эта возможность может пригодиться для выравнивания колонки чисел по точке или запятой. Работает только в том случае, если значение атрибута align установлено как char
+                </td>
+            </tr>
+            <tr>
+                <td>charoff</td>
+                <td>
+                &lt;table&gt;
+                        &lt;thead&gt; .... &lt;/thead&gt;
+                        &lt;tfoot char="c" align="char"&gt; ... &lt;/tfoot&gt;
+                        &lt;tbody&gt;
+                         &lt;tr&gt;
+                          &lt;td&gt; ... &lt;/td&gt;
+                         &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                </td>
+                <td>...</td>
+                <td>
+                    Если атрибут align установлен как char, а для атрибута char в качестве значения задан символ, то с помощью атрибута charoff можно смещать содержимое ячеек влево или вправо относительно заданного символа. Так, charoff="3" означает, что браузер должен сместить содержимое ячейки на три символа вправо, а charoff="-3" — сместить на три символа влево.
+                </td>
+           </tr>
+           <tr>
+               <td>valign</td>
+               <td>
+                &lt;tfoot valign="top | middle | bottom | baseline"&gt;...&lt;/tfoot&gt;
+               </td>
+               <td>
+                <table width="600" border="1" cellspacing="0">
+                    <tfoot align="center" valign="bottom">
+                     <tr>
+                      <td colspan="2" height="50">Объединенная ячейка в TFOOT, выровнена по нижнему краю</td>
+                     </tr> 
+                    </tfoot>
+                 
+                    <tbody align="right" valign="top">
+                     <tr>
+                      <td>Ячейка 1</td>
+                      <td>Ячейка 2</td> 
+                     </tr> 
+                     <tr>
+                      <td>Ячейка 3</td>
+                      <td>Ячейка 4</td> 
+                     </tr> 
+                    </tbody>
+                   </table>
+               </td>
+               <td>
+                    Устанавливает вертикальное выравнивание содержимого ячеек в контейнере &lt;tfoot&gt;. По умолчанию контент ячейки располагается по ее вертикали в центре.
+               </td>
+           </tr>
+        </table>
+        Также для этого тега доступны 
+    <a href="http://htmlbook.ru/html/attr/common">глобальные атрибуты</a> 
+    и
+    <a href="http://htmlbook.ru/html/attr/event">события</a>.</p>
+    </main>
+    <footer>
+        <p><h2><a href="index.html">Оглавление</a></h2></p>
+    </footer>
+</body>
+</html>
