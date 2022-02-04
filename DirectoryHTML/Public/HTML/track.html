@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>track</title>
+</head>
+
+<body>
+    <header>
+        <h1>Тег &lt;track&gt;</h1>
+    </header>
+    <main>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>...</td>
+                <td>
+                    &lt;audio&gt;
+                    &lt;track kind | src | srclang | label | default&gt;
+                    &lt;/audio&gt;
+                </td>
+                <td>
+                    <video width="500" height="400" controls>
+                        <source src="video/jane.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                        <source src="video/jane.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="video/jane.webm" type='video/webm; codecs="vp8, vorbis"'>
+                        <track kind="subtitles" src="video/jane.en.srt" srclang="en" label="English">
+                        <track kind="subtitles" src="video/jane.ua.srt" srclang="uk" label="Український">
+                        <track kind="subtitles" src="video/jane.ru.srt" srclang="ru" label="Русский">
+                        Тег video не поддерживается вашим браузером.
+                    </video>
+                </td>
+                <td>
+                    Позволяет авторам указать текстовую дорожку для медийных элементов &lt;audio&gt; и &lt;video&gt;.
+                    Такая дорожка обычно содержит субтитры на разных языках, комментарии, заголовки и др
+                    <dl>
+                        <dt>kind</dt>
+                        <dd>Указывает тип дорожки</dd>
+                        <dt>src</dt>
+                        <dd>Путь к файлу с дорожкой</dd>
+                        <dt>srclang</dt>
+                        <dd>Язык дорожки</dd>
+                        <dt>label</dt>
+                        <dd>
+                            Отображаемое название дорожки. Если этот атрибут не указан, браузер станет использовать
+                            значение, которое применяется у него по умолчанию, например «untitled1».
+                        </dd>
+                        <dt>default</dt>
+                        <dd>
+                            Наличие этого атрибута указывает, что данная дорожка предпочтительна и должна быть выбрана
+                            по умолчанию. Только одна дорожка может иметь атрибут default.
+                        </dd>
+                    </dl>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>
+        <h2><a href="index.html">Оглавление</a></h2>
+        </p>
+    </footer>
+</body>
+
+</html>
