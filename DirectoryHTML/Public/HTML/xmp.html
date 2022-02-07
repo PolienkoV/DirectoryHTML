@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmp</title>
+</head>
+<body>
+    <header>
+        <h1>Тег &lt;xmp&gt;</h1>
+    </header>
+    <main>
+        <table border="1" width="100%" cellpadding="5">
+            <col width="100">
+            <col span="2" width="400">
+            <col width="1000" align="center">
+            <tr>
+                <td>...</td>
+                <td>
+                    &lt;xmp&gt;Текст&lt;/xmp&gt;
+                </td>
+                <td>
+                    <p>Пример программы</p>
+                      <xmp>
+                      while (<>) {
+                        $org=$_;
+                        s/\\["']//g;
+                        s/\/\/[^:].*//;
+                        s/\/\*.*\*\///g;
+                        if ($comment == 1) {
+                        if (s/.*\*\///) {
+                            $comment = 0;
+                        }
+                        else {
+                        next;
+                        }
+                    }
+                    if (s/\/\*.*//) {
+                    $comment = 1;
+                    }
+                    if (/^\s*#/) {
+                    next;
+                    }
+   }                </xmp>
+                </td>
+                <td>
+                    Тег &lt;xmp&gt; отображает содержимое контейнера «как есть» и шрифтом фиксированной ширины. Пока тег &lt;xmp&gt; не закрыт, все теги внутри него отображаются как обычный текст.
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p><h2><a href="index.html">Оглавление</a></h2></p>
+    </footer>
+</body>
+</html>
